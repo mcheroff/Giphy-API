@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	populateButtons(tvShows, "tvShowButton", "#tvShowButtons" );
-});
+
 
 var tvShows = ["Bob's Burgers", "House of Cards", "Daredevil", "The Mindy Project", "The Daily Show"];
 
@@ -51,7 +51,7 @@ $(document).on("click", ".tvShowButton", function(){
 	 });
 });
 
-$(document).on('click', '.animalImage', function(){
+$(document).on('click', '.gifImage', function(){
     var state = $(this).attr('data-state');
     
     if ( state == 'still'){
@@ -73,4 +73,7 @@ $("#addTvShow").on("click", function(){
 	populateButtons(tvShows, "tvShowButton", "#tvShowButtons" );
 
 	return false;
+});
+
+
 });
