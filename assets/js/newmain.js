@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 
 var buttonHTML = "";
-var buttonArray = ["Bob's Burgers", "House of Cards", "Daredevil", "The Mindy Project", "The Daily Show"];
+var buttonArray = ["Bob's Burgers", "Daredevil", "Scandal", "The+Daily+Show", "Scream+Queens", "Luke+Cage"];
 var newTvShowItem;
 var gifArray = [];
 
@@ -36,7 +36,7 @@ $("body").on("click", ".tvShowButtons", function(event){
 				$("#gifsDisplay").append("<div class='GIFbox'><p class='title'>Rating: "+ response.data[i].rating.toUpperCase() +"</p><div class='image-container'><img class='tvShowIMG img-responsive center-block'" + "data-still='" + response.data[i].images.downsized_still.url + "'" + "data-animate='" + response.data[i].images.downsized.url + "'" + "data-state='still'" + "src='" + response.data[i].images.downsized_still.url + "'></div></div>")
 			}
 		})
-})
+});
 
 $('body').on('click', '.tvShowIMG', function(){
      var state = $(this).attr('data-state');
@@ -51,7 +51,6 @@ $('body').on('click', '.tvShowIMG', function(){
           $(this).attr('data-state', 'still');
      };
 });
-
 
 
 
